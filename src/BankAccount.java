@@ -1,10 +1,10 @@
 public class BankAccount {
 
-    String accountNumber;
-    double accountBalance;
-    String customerName;
-    String email;
-    String phoneNumber;
+    private String accountNumber;
+    private double accountBalance;
+    private String customerName;
+    private String email;
+    private String phoneNumber;
 
     public String getAccountNumber() {
         return accountNumber;
@@ -48,14 +48,17 @@ public class BankAccount {
 
     public void depositFunds(double amount) {
         setAccountBalance(getAccountBalance() + amount);
+        System.out.println("$" + amount + " has been deposited. Your new balance is $" + getAccountBalance());
     }
 
     public void withdrawalFunds(double amount) {
         if (getAccountBalance() - amount < 0) {
-            System.out.println("Invalid Transaction");
+            System.out.println("Insufficient Funds");
         } else {
             setAccountBalance(getAccountBalance() - amount);
+            System.out.println("$" + amount + " has been withdrawn. Your new balance is $" + getAccountBalance());
         }
+
     }
 
 

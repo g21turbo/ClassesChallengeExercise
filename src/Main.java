@@ -3,23 +3,21 @@ public class Main {
 
 
         BankAccount account = new BankAccount();
-        account.customerName = "John Smith";
-        account.phoneNumber = "555-123-6789";
-        account.email = "John.Smith@gmail.com";
-        account.accountNumber = "123456789";
-        account.accountBalance = 500.00;
+        account.setCustomerName("John Smith");
+        account.setPhoneNumber("555-123-6789");
+        account.setEmail("John.Smith@gmail.com");
+        account.setAccountNumber("123456789");
+        account.setAccountBalance(500.00);
 
         account.withdrawalFunds(50.00);
 
-        System.out.println(account.getAccountBalance());
 
         account.withdrawalFunds(500.00);
 
-        System.out.println(account.getAccountBalance());
 
         account.depositFunds(10000.00);
 
-        System.out.println(account.getAccountBalance());
+
 
     }
 
