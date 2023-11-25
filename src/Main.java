@@ -17,6 +17,8 @@ public class Main {
 
         account.depositFunds(10000.00);
 
+        account.withdrawalFunds(10450.00);
+
 
 
     }
