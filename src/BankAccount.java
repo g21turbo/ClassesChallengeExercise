@@ -6,6 +6,19 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    public BankAccount() {
+        System.out.println("Empty constructor called");
+    }
+
+    public BankAccount(String accountNumber, double accountBalance, String customerName, String email, String phoneNumber) {
+        System.out.println("Account constructor with parameters called");
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -53,7 +66,7 @@ public class BankAccount {
 
     public void withdrawalFunds(double amount) {
         if (getAccountBalance() - amount < 0) {
-            System.out.println("Insufficient Funds");
+            System.out.println("Unable to withdrawal $" + amount + ". Insufficient Funds");
         } else {
             setAccountBalance(getAccountBalance() - amount);
             System.out.println("$" + amount + " has been withdrawn. Your new balance is $" + getAccountBalance());
