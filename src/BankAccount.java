@@ -7,6 +7,7 @@ public class BankAccount {
     private String phoneNumber;
 
     public BankAccount() {
+        this("987654321", 700.00, "Michael Jordan", "Michael.Jordan@gmail.com", "555-987-1234");
         System.out.println("Empty constructor called");
     }
 
