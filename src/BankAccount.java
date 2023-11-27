@@ -3,20 +3,27 @@ public class BankAccount {
     private String accountNumber;
     private double accountBalance;
     private String customerName;
-    private String email;
+    private String customerEmail;
     private String phoneNumber;
 
     public BankAccount() {
-        this("987654321", 700.00, "Michael Jordan", "Michael.Jordan@gmail.com", "555-987-1234");
+        this("987654321", 700.00, "Default Name", "Default Email", "Default Phone Number");
         System.out.println("Empty constructor called");
     }
 
-    public BankAccount(String accountNumber, double accountBalance, String customerName, String email, String phoneNumber) {
+    public BankAccount(String customerName, String customerEmail, String phoneNumber) {
+        this("999999", 200.50, customerName, customerEmail, phoneNumber);
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public BankAccount(String accountNumber, double accountBalance, String customerName, String customerEmail, String phoneNumber) {
         System.out.println("Account constructor with parameters called");
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
         this.customerName = customerName;
-        this.email = email;
+        this.customerEmail = customerEmail;
         this.phoneNumber = phoneNumber;
     }
 
@@ -44,12 +51,12 @@ public class BankAccount {
         this.customerName = customerName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 
     public String getPhoneNumber() {
